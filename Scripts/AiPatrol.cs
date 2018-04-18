@@ -1,15 +1,28 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[CreateAssetMenu(fileName = "Patrol")]
-
+[CreateAssetMenu(fileName = "Hunt", menuName = "Ai/Function/Patrol")]
 public class AiPatrol : AiBase
 {
 	private int i = 0;
+
+	public GameAction GameAction;
 	
 	public List<Transform> PatrolPoints { get ; set; }
-	
+
+	private void OnEnable()
+	{
+		PatrolPoints.Clear();
+		GameAction.Call += Call;
+	}
+
+	private void Call(object obj)
+	{
+		PatrolPoints.Add(obj as Transform);
+	}
+
 
 	public override void Navigate(NavMeshAgent ai)
 	{	
