@@ -24,7 +24,6 @@ public class AiBehaviour : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		print(this);
 		Anims.SetTrigger("Hunt");
 	}
 	
