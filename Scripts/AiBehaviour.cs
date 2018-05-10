@@ -11,6 +11,7 @@ public class AiBehaviour : MonoBehaviour
 	public Animator Anims;
 	public AiBrain Brain;
 	public AiBase StartAiBase;
+	public string AnimationName = "Hunt";
 
 
 	void Start ()
@@ -24,7 +25,7 @@ public class AiBehaviour : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		Anims.SetTrigger("Hunt");
+		if (Anims != null) Anims.SetTrigger(AnimationName);
 	}
 	
 	private void OnEnable()
