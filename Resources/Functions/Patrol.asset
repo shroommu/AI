@@ -11,4 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc79c88228e340ae94f9104e7ad7473, type: 3}
   m_Name: Patrol
   m_EditorClassIdentifier: 
-  GameAction: {fileID: 11400000, guid: 83f949dcccf3e4c3a8d07694ab007b87, type: 2}
+  AddPointsToList: {fileID: 11400000, guid: 83f949dcccf3e4c3a8d07694ab007b87, type: 2}
+  AddPointList: {fileID: 11400000, guid: 5469c199940c34043b5d7e4e873ae6bb, type: 2}
