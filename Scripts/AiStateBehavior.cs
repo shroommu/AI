@@ -3,14 +3,16 @@
 public class AiStateBehavior : StateMachineBehaviour
 {
 
-	public AiBrain Brain;
+	public AIStates StateMachine;
+	
+	//public AiBrain Brain;
 	public AiBase AiBase;
 
 	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
-		Brain.AiBase = AiBase;
-		
+		StateMachine = animator.GetBehaviour<AIStates>() ;
+		StateMachine.CurrentAiBrain.AiBase = AiBase;
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

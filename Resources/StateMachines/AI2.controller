@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: AI
+  m_Name: AI2
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Hunt
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StateMachine: {fileID: 0}
-  AiBase: {fileID: 11400000, guid: fa7bad835181744e7864f027e12cb57e, type: 2}
+  AiBase: {fileID: 11400000, guid: 00e11ec0df9d44b2b99274f417a6c1d4, type: 2}
 --- !u!114 &114238951413509072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Agent: {fileID: 0}
-  CurrentAiBrain: {fileID: 11400000, guid: da63cf8b9aeed47a481097ecf39a9c6c, type: 2}
+  CurrentAiBrain: {fileID: 11400000, guid: 06fab92f895384cbe8a9b9be246854ba, type: 2}
 --- !u!114 &114635624495103746
 MonoBehaviour:
   m_ObjectHideFlags: 1

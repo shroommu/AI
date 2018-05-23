@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,22 +7,28 @@ public class AiPatrol : AiBase
 {
 	private int i = 0;
 
-	public GameAction GameAction;
+	public GameAction AddPointsToList;
+	public GameAction AddPointList;
 	
 	public List<Transform> PatrolPoints { get ; set; }
 
 	private void OnEnable()
 	{
 		PatrolPoints.Clear();
-		GameAction.Call += Call;
+		AddPointsToList.Call += AddPatrolPoints;
+		AddPointList.Call += AddPatrolPointList;
 	}
 
-	private void Call(object obj)
+	private void AddPatrolPoints(object obj)
 	{
 		PatrolPoints.Add(obj as Transform);
 	}
-
-
+	
+	private void AddPatrolPointList (object obj)
+	{
+		PatrolPoints = obj as List<Transform>;
+	}
+	
 	public override void Navigate(NavMeshAgent ai)
 	{	
 		if (ai.remainingDistance < 1)
